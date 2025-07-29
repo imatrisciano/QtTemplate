@@ -1,0 +1,85 @@
+// prop: json-converted
+// prop: auto-generated
+
+import QmlProject
+
+Project {
+    mainFile: "content/App.qml"
+    mainUiFile: "content/MainScreen.ui.qml"
+    targetDirectory: "/opt/MyQuickTemplateApp"
+    enableCMakeGeneration: true
+    widgetApp: true
+    importPaths: [ "imports","asset_imports","backend_mock" ]
+
+    qdsVersion: "3.0"
+    qt6Project: true
+    qtForMCUs: false
+
+    multilanguageSupport: true
+    primaryLanguage: "en"
+    supportedLanguages: [ "en" ]
+
+    Environment {
+        QT_AUTO_SCREEN_SCALE_FACTOR: "1"
+        QT_ENABLE_HIGHDPI_SCALING: "0"
+        QT_LOGGING_RULES: "qt.qml.connections=false"
+        QT_QUICK_CONTROLS_CONF: "qtquickcontrols2.conf"
+    }
+
+    QmlFiles {
+        directory: "content"
+    }
+
+    QmlFiles {
+        directory: "imports"
+    }
+
+    QmlFiles {
+        directory: "backend_mock"
+    }
+
+    JavaScriptFiles {
+        directory: "content"
+    }
+
+    JavaScriptFiles {
+        directory: "imports"
+    }
+
+    ImageFiles {
+        directory: "content"
+    }
+
+    Files {
+        filter: "*.conf"
+        files: [
+            "qtquickcontrols2.conf"
+        ]
+    }
+
+    Files {
+        directory: "."
+        filter: "qmldir"
+    }
+
+    Files {
+        filter: "*.ttf;*.otf"
+    }
+
+    Files {
+        filter: "*.wav;*.mp3"
+    }
+
+    Files {
+        filter: "*.mp4"
+    }
+
+    Files {
+        filter: "*.glsl;*.glslv;*.glslf;*.vsh;*.fsh;*.vert;*.frag"
+    }
+
+    Files {
+        directory: "content"
+        filter: "*.mesh"
+    }
+}
